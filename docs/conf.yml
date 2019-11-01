@@ -1,0 +1,5 @@
+project = 'IRRemoteESP8266'
+copyright = '2019, Mark Kuchel'
+version = IRRemote.ESP8266.__version__
+
+highlight_language = 'C'
