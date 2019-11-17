@@ -200,6 +200,8 @@ const uint16_t kMinUnknownSize = 2 * 10;
 #define KEY_JSON "json"
 #define KEY_RESEND "resend"
 #define KEY_VCC "vcc"
+#define KEY_PAYLOAD_ON "on"
+#define KEY_PAYLOAD_OFF "off"
 
 // HTML arguments we will parse for IR code information.
 #define KEY_TYPE "type"  // KEY_PROTOCOL is also checked too.
