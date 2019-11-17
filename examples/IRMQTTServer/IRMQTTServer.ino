@@ -264,6 +264,8 @@
  *     fan_mode_state_topic: "ir_server/ac/stat/fanspeed"
  *     swing_mode_command_topic: "ir_server/ac/cmnd/swingv"
  *     swing_mode_state_topic: "ir_server/ac/stat/swingv"
+ *     payload_on: "on"
+ *     payload_off: "off"
  *     min_temp: 16
  *     max_temp: 32
  *     temp_step: 1
@@ -2511,12 +2513,15 @@ void sendMQTTDiscovery(const char *topic) {
       "{"
       "\"~\":\"" + MqttClimate + "\","
       "\"name\":\"" + MqttHAName + "\","
+      "\"unique_id\":\"" + WiFi.macAddress() + "\","
       "\"pow_cmd_t\":\"~/" MQTT_CLIMATE_CMND "/" KEY_POWER "\","
       "\"mode_cmd_t\":\"~/" MQTT_CLIMATE_CMND "/" KEY_MODE "\","
       "\"mode_stat_t\":\"~/" MQTT_CLIMATE_STAT "/" KEY_MODE "\","
       "\"modes\":[\"off\",\"auto\",\"cool\",\"heat\",\"dry\",\"fan_only\"],"
       "\"temp_cmd_t\":\"~/" MQTT_CLIMATE_CMND "/" KEY_TEMP "\","
       "\"temp_stat_t\":\"~/" MQTT_CLIMATE_STAT "/" KEY_TEMP "\","
+      "\"payload_on\":\"" KEY_PAYLOAD_ON "\","
+      "\"payload_off\":\"" KEY_PAYLOAD_OFF "\","
       "\"min_temp\":\"16\","
       "\"max_temp\":\"30\","
       "\"temp_step\":\"1\","
